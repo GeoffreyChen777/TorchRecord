@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="geo@192.168.193.252:22" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="geo@192.168.193.252:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="LMDBLoader" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
