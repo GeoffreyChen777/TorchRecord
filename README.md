@@ -20,6 +20,11 @@ TorchRecord use LMDB as the storage format. A specific writer and loader can be 
     
     100%|██████████████████| 369/369 [00:15<00:00, 23.80it/s]
     
+    
+    
+100%|█████████████████████████████████████████| 369/369 [00:38<00:00,  9.71it/s]
+100%|█████████████████████████████████████████| 369/369 [00:44<00:00,  8.39it/s]
+    
 ## Demo
 
 ```python
@@ -28,6 +33,8 @@ import random
 from torchrecord import Writer
 from torchrecord import RecordLoader
 from torchrecord import default_data_process_func
+import torchvision.transforms as transforms
+import torch
 # =====================================================
 # Make data list (txt or csv), one data item per line.
 # The template of data_list:
@@ -66,8 +73,23 @@ writer.write()
 # shuffle: if it is True, the loader will shuffle the data before reading them
 # =====================================================
 
+trans = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor()
+])
+
+def collate_fn(batch):
+    imgs = []
+    labels = []
+    for item in batch:
+        imgs.append(trans(item[0]).unsqueeze(0))
+        labels.append(torch.tensor(int(item[1])).unsqueeze(0))
+    imgs = torch.cat(imgs)
+    labels = torch.cat(labels)
+    return imgs, labels
+
 loader = RecordLoader(record_path='./test_torchrecord', 
-                      batch_size=32, num_workers=2, 
+                      batch_size=32, num_workers=2, collate_fn=collate_fn,
                       shuffle=True)
 
 for i, batch in enumerate(loader):
@@ -141,7 +163,7 @@ class RecordLoader(object):
     
 - transform
 
-    This is the transform function for decode the tensor_protos. You can also do the torchvision.transform here.
+    This is the transform function for decode the byte string to the tensor_protos. It is not the torchvision transforms.
     
     The default transform is like this:
     

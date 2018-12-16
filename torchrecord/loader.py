@@ -1,21 +1,20 @@
 from multiprocessing import Process, Pool, Manager, Queue
 import os
 import lmdb
-import random
 from .dataset import LMDBDataset
 from .caffe2_pb2 import TensorProtos
 from .transforms import *
-import sys
 import random
 import math
-if sys.version_info[0] == 2:
-    import Queue as queue
-else:
-    import queue
 
 
 def default_collate_fn(batch):
-    return batch
+    imgs = []
+    labels = []
+    for item in batch:
+        imgs.append(item[0])
+        labels.append(item[1])
+    return imgs, labels
 
 
 class DBLoaderIterator(object):
@@ -59,7 +58,7 @@ class DBLoaderIterator(object):
 
 
 class RecordLoader(object):
-    def __init__(self, record_path, batch_size=32, collate_fn=default_collate_fn, num_workers=1, shuffle=True, dataq_maxsize=200, transform=default_transform, dataset=None):
+    def __init__(self, record_path, batch_size=32, collate_fn=default_collate_fn, num_workers=1, shuffle=True, dataq_maxsize=200, raw_transform=default_transform, dataset=None):
 
         self.batch_size = batch_size
         self.collate_fn = collate_fn
@@ -81,7 +80,7 @@ class RecordLoader(object):
 
         self.insert_db_queue()
 
-        self.transform = transform
+        self.transform = raw_transform
 
         if dataset is None:
             self.dataset = self.default_dataset

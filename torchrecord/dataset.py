@@ -1,5 +1,6 @@
 import lmdb
 
+
 class Dataset(object):
     def __iter__(self):
         raise NotImplementedError
