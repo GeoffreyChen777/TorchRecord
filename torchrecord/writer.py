@@ -1,9 +1,8 @@
 import lmdb
-import glob
 import os
 from PIL import Image
 from .caffe2_pb2 import TensorProtos
-from multiprocessing import Pool
+from multiprocessing import Pool, Process
 import random
 import time
 
@@ -57,16 +56,20 @@ class Writer(object):
 
         data_num = len(data_list)
 
-        pool = Pool(self.db_num)
         print("Total: {} data items.".format(data_num))
         print("Start Writing...")
         tik = time.time()
+        ps = []
         for i in range(self.db_num):
-            pool.apply_async(self.write_func,
-                             args=(data_list[int(i*data_num/self.db_num):int((i+1)*data_num/self.db_num)],
-                                   i, self.output_dir, self.map_size, self.data_process_func,))
-        pool.close()
-        pool.join()
+            p = Process(target=self.write_func,
+                        args=(data_list[int(i * data_num / self.db_num):int((i + 1) * data_num / self.db_num)],
+                              i, self.output_dir, self.map_size, self.data_process_func,))
+            p.daemon = True
+            p.start()
+            ps.append(p)
+
+        for i in range(self.db_num):
+            ps[i].join()
         tok = time.time()
         print('All Processes Are Done. Cost:{}s'.format(tok-tik))
 
