@@ -75,7 +75,39 @@ for i, batch in enumerate(loader):
 
 ```
 
-## The Detial of the RecordLoader
+## The Detail of the Writer
+
+- data_process_func:
+
+We list all the data path and label in the data_list file, and use the `data_process_func` to process the data and labels.
+
+You can define your own `data_process_func` and send them as a parameter to initialize the Writer.
+
+The `default_data_process_func` are as follows:
+
+```python
+def default_data_process_func(data):
+    data = data.split(' ')
+    tensor_protos = TensorProtos()
+
+    img = Image.open(data[0]).convert("RGB")
+    img_tensor = tensor_protos.protos.add()
+    img_tensor.dims.extend(img.size)
+    img_tensor.data_type = 3
+    img_tensor.byte_data = img.tobytes()
+
+    label_tensor = tensor_protos.protos.add()
+    label_data = str.encode(data[1])
+    label_tensor.data_type = 3
+    label_tensor.byte_data = label_data
+    return tensor_protos
+```
+
+The `data` parameter is one line of your data_list file. 
+
+We use the TensorProtos which is a *Buffer Protocols* (designed by Google) object as the data structure. You can save your data in TensorProtos
+and return it. Then, the writer will save the TensorProtos into LMDB.
+## The Detail of the RecordLoader
 ```python
 class RecordLoader(object):
     def __init__(self, 
