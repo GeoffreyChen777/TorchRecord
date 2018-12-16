@@ -8,22 +8,29 @@ TorchRecord use LMDB as the storage format. A specific writer and loader can be 
 
 ## Reading Performance Benchmark
 
-- Conventional Dataloader with CUB200 datasets(11788 jpg images):
+Dataset: CUB200 datasets(11788 jpg images)
 
-    num_worker = 2, batch_size = 32
+num_worker: 2, batch_size: 32
+
+### Load Raw Image
+
+- Conventional Dataloader:
     
     100%|██████████████████| 369/369 [00:42<00:00,  8.78it/s]
     
-- TorchRecord loader with CUB200 datasets:
-
-    num_worker = 2, batch_size = 32
+- TorchRecord loader:
     
     100%|██████████████████| 369/369 [00:15<00:00, 23.80it/s]
     
-    
-    
-100%|█████████████████████████████████████████| 369/369 [00:38<00:00,  9.71it/s]
-100%|█████████████████████████████████████████| 369/369 [00:44<00:00,  8.39it/s]
+### Load Image and transform them to tensor
+
+- Conventional Dataloader:
+
+    100%|██████████████████| 369/369 [00:44<00:00,  8.39it/s]
+
+- TorchRecord loader:
+
+    100%|██████████████████| 369/369 [00:38<00:00,  9.71it/s]
     
 ## Demo
 
