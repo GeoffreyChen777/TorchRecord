@@ -6,7 +6,7 @@ TorchRecord can merge the small files into one or multiple big file to improve t
 
 TorchRecord use LMDB as the storage format. A specific writer and loader can be used to write and read the record.
 
-## Reading Benchmark
+## Reading Performance Benchmark
 
 - Conventional Dataloader with CUB200 datasets(11788 jpg images):
 
