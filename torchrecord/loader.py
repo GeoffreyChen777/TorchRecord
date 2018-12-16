@@ -52,6 +52,8 @@ class DBLoaderIterator(object):
         else:
             return self.collate_fn([self.batch_pool.pop() for _ in range(batch_size)])
 
+    next = __next__
+
     def __iter__(self):
         return self
 

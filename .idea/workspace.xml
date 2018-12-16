@@ -15,7 +15,7 @@
     <SUITE FILE_PATH="coverage/LMDBLoader$dbloader.coverage" NAME="dbloader Coverage Results" MODIFIED="1544788449630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/torchlmdb" />
     <SUITE FILE_PATH="coverage/LMDBLoader$test_mk_label.coverage" NAME="test_mk_label Coverage Results" MODIFIED="1544941015901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TorchRecord$test_mk_label__1_.coverage" NAME="test_mk_label (1) Coverage Results" MODIFIED="1544942917933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../TorchRecord" />
-    <SUITE FILE_PATH="coverage/TorchRecord$test_loader__1_.coverage" NAME="test_loader (1) Coverage Results" MODIFIED="1544943217874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../TorchRecord" />
+    <SUITE FILE_PATH="coverage/TorchRecord$test_loader__1_.coverage" NAME="test_loader (1) Coverage Results" MODIFIED="1544948542024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../TorchRecord" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1257938538">
@@ -29,7 +29,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="proto" value="1" />
           <entry key="py" value="19" />
           <entry key="pyi" value="1" />
@@ -37,7 +37,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="19" />
           <entry key="PythonStub" value="1" />
@@ -45,14 +45,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="2663" />
-          <entry key="py" value="11801" />
+          <entry key="md" value="2681" />
+          <entry key="py" value="11841" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="2658" />
-          <entry key="Python" value="11806" />
+          <entry key="Markdown" value="2676" />
+          <entry key="Python" value="11846" />
         </counts>
       </usages-collector>
     </session>
@@ -119,23 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../TorchRecord/torchrecord/dataset.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="520">
-                <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="381">
+              <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -150,26 +138,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TorchRecord/test/test_loader.py">
+        <entry file="file://$PROJECT_DIR$/../TorchRecord/test_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="260">
+              <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../TorchRecord/conv_dataset.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1544943152851" expanded="true" signature="631:855" ph="..." />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="392">
+                <caret line="68" selection-start-line="68" selection-end-line="68" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -212,10 +199,11 @@
         <option value="$PROJECT_DIR$/../TorchRecord/conv_dataset.py" />
         <option value="$PROJECT_DIR$/../TorchRecord/torchrecord/dbloader.py" />
         <option value="$PROJECT_DIR$/../TorchRecord/torchrecord/__init__.py" />
-        <option value="$PROJECT_DIR$/../TorchRecord/test_loader.py" />
         <option value="$PROJECT_DIR$/../TorchRecord/torchrecord/loader.py" />
         <option value="$PROJECT_DIR$/../TorchRecord/torchrecord/transforms.py" />
         <option value="$PROJECT_DIR$/../TorchRecord/README.md" />
+        <option value="$PROJECT_DIR$/../TorchRecord/test_loader.py" />
+        <option value="$PROJECT_DIR$/../TorchRecord/torchrecord/dataset.py" />
       </list>
     </option>
   </component>
@@ -271,6 +259,11 @@
             <path>
               <item name="TorchRecord" type="b2602c69:ProjectViewProjectNode" />
               <item name="TorchRecord" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TorchRecord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TorchRecord" type="462c0819:PsiDirectoryNode" />
               <item name="torchrecord" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -288,6 +281,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../TorchRecord" />
       <recent name="$PROJECT_DIR$/../TorchRecord/test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -627,10 +621,10 @@
     <layout>
       <window_info id="Structure" order="0" show_stripe_button="false" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" weight="0.32960597" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" side_tool="true" visible="true" weight="0.18104367" />
+      <window_info content_ui="combo" id="Project" order="2" side_tool="true" visible="true" weight="0.18104367" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944608" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.388102" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.388102" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -730,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TorchRecord/test/test_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../TorchRecord/torchrecord/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -762,15 +746,7 @@
           <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1544943152851" expanded="true" signature="631:855" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TorchRecord/torchrecord/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
@@ -805,10 +781,27 @@
     <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="520">
-            <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <first_editor relative-caret-position="392">
+            <caret line="68" selection-start-line="68" selection-end-line="68" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TorchRecord/test_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../TorchRecord/torchrecord/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -32,6 +32,8 @@ class LMDBIterator(object):
             print(e)
             raise StopIteration
 
+    next = __next__
+
     def __iter__(self):
         return self
 
