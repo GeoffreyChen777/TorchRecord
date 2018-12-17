@@ -13,13 +13,13 @@ Dataset: CUB200 datasets(11788 jpg images)
 ### Load Image and transform them to tensor (batch_size: 32)
 
 - num_workers = 2:
-    ```python
+    ```
     Conventional:    100%|██████████████████| 369/369 [00:42<00:00,  8.72it/s]
     TRLoader:        100%|██████████████████| 369/369 [00:27<00:00, 15.62it/s]
     ```
 
 - num_workers = 4:
-    ```python
+    ```
     Conventional:    100%|██████████████████| 369/369 [00:22<00:00, 16.16it/s]
     TRLoader:        100%|██████████████████| 369/369 [00:18<00:00, 19.59it/s]
     ```
@@ -67,7 +67,7 @@ writer.write()
 # =====================================================
 
 dataset = TRDataset()
-sampler = TRSampler('./testdb', shuffle=True, batch_size=32)
+sampler = TRSampler('./test_torchrecord', shuffle=True, batch_size=32)
 loader = data.DataLoader(dataset, batch_sampler=sampler, num_workers=2)
 for i, batch in enumerate(tqdm(loader)):
     pass
