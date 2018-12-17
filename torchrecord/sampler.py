@@ -3,10 +3,6 @@ import os
 import random
 import lmdb
 import sys
-if sys.version_info[0] == 2:
-    import Queue as queue
-else:
-    import queue
 
 
 class TRIterator(object):
