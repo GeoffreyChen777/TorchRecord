@@ -67,7 +67,7 @@ writer.write()
 # =====================================================
 
 dataset = TRDataset()
-sampler = TRSampler('./testdb', shuffle=True, batch_size=32)
+sampler = TRSampler('./test_torchrecord', shuffle=True, batch_size=32)
 loader = data.DataLoader(dataset, batch_sampler=sampler, num_workers=2)
 for i, batch in enumerate(tqdm(loader)):
     pass
