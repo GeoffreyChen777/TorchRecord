@@ -23,7 +23,12 @@ Dataset: CUB200 datasets(11788 jpg images)
     Conventional:    100%|██████████████████| 369/369 [00:22<00:00, 16.16it/s]
     TRLoader:        100%|██████████████████| 369/369 [00:18<00:00, 19.59it/s]
     ```
-    
+## Installation
+
+```bash
+pip install torchrecord
+```
+
 ## Demo
 
 ```python
