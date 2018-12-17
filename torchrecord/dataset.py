@@ -19,5 +19,5 @@ class TRDataset(data.Dataset):
         return item
 
     def __len__(self):
-        return 369
+        return 1
 

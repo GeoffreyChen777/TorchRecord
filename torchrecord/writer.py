@@ -59,30 +59,17 @@ class Writer(object):
         print("Total: {} data items.".format(data_num))
         print("Start Writing...")
         tik = time.time()
-        ps = []
-        for i in range(self.db_num):
-            p = Process(target=self.write_func,
-                        args=(data_list[int(i * data_num / self.db_num):int((i + 1) * data_num / self.db_num)],
-                              i, self.output_dir, self.map_size, self.data_process_func,))
-            p.daemon = True
-            p.start()
-            ps.append(p)
-
-        for i in range(self.db_num):
-            ps[i].join()
+        self.write_func(data_list, data_num, self.db_num, self.output_dir, self.map_size, self.data_process_func)
         tok = time.time()
         print('All Processes Are Done. Cost:{}s'.format(tok-tik))
 
     @staticmethod
-    def write_func(data_list, db_idx, output_dir, map_size, data_process_func):
-        db_path = os.path.join(output_dir, 'db{}'.format(db_idx))
-        if not os.path.isdir(db_path):
-            os.makedirs(db_path)
-        try:
-            env = lmdb.open(db_path, map_size=map_size)
-            with env.begin(write=True) as tnx:
-                for idx, data in enumerate(data_list):
+    def write_func(data_list, data_num, db_num, output_dir, map_size, data_process_func):
+        env = lmdb.open(output_dir, map_size=map_size, max_dbs=db_num)
+        for i in range(db_num):
+            cur_list = data_list[int(i * data_num / db_num):int((i + 1) * data_num / db_num)]
+            db = env.open_db('db{}'.format(i).encode())
+            with env.begin(db=db, write=True) as txn:
+                for idx, data in enumerate(cur_list):
                     tensor_protos = data_process_func(data)
-                    tnx.put('{}'.format(idx).encode(), tensor_protos.SerializeToString())
-        except Exception as e:
-            print(e)
+                    txn.put('{}'.format(idx).encode(), tensor_protos.SerializeToString())
