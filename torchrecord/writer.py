@@ -70,6 +70,9 @@ class Writer(object):
             cur_list = data_list[int(i * data_num / db_num):int((i + 1) * data_num / db_num)]
             db = env.open_db('db{}'.format(i).encode())
             with env.begin(db=db, write=True) as txn:
+                idx_place = len(str(len(cur_list)))
+                idx_format = '{:0'+str(idx_place)+'}'
                 for idx, data in enumerate(cur_list):
                     tensor_protos = data_process_func(data)
-                    txn.put('{}'.format(idx).encode(), tensor_protos.SerializeToString())
+                    txn.put(idx_format.format(idx).encode(), tensor_protos.SerializeToString())
+            print("db{} Done!".format(i))

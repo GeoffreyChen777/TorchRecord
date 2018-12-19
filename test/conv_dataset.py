@@ -9,7 +9,8 @@ import torchvision.transforms as tt
 
 t = tt.Compose([
     tt.Resize((224, 224)),
-    tt.ToTensor()
+    tt.ToTensor(),
+    tt.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
 ])
 
 
@@ -26,7 +27,7 @@ class CUB200(data.Dataset):
         self.count = 0
 
     def __getitem__(self, item_index):
-        image_path = os.path.join(self.image_index[item_index])
+        image_path = os.path.join('../data/datasets/CUB_200/CUB_200_2011/images/', self.image_index[item_index].replace('testdata/', ''))
         img = self.loader(image_path)
         label = torch.tensor(int(self.label_idx[item_index]))
         return img, label

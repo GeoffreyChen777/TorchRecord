@@ -5,7 +5,7 @@ count = 0
 
 cls = {}
 
-with open('./test/data_list.txt', 'w') as writer:
+with open('./data_list.txt', 'w') as writer:
     for p, d, fl in os.walk('./testdata'):
         for f in fl:
             if f.endswith('jpg'):

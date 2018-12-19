@@ -1,11 +1,5 @@
 from PIL import Image
 import torchvision.transforms as tvt
-import time
-import cv2
-import numpy as np
-import time
-import io
-import torch.nn.functional as F
 
 trans = tvt.Compose([
     tvt.Resize((224, 224)),
@@ -20,4 +14,5 @@ def default_transform(tensor_protos):
     # img = np.array(Image.open(bbb))
     img = trans(img)
     label = int(tensor_protos.protos[1].byte_data)
+
     return img, label
