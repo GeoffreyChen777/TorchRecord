@@ -51,13 +51,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="17" />
-          <entry key="md" value="5496" />
+          <entry key="md" value="5685" />
           <entry key="py" value="36631" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="5491" />
+          <entry key="Markdown" value="5680" />
           <entry key="PLAIN_TEXT" value="17" />
           <entry key="Python" value="36636" />
         </counts>
@@ -98,8 +98,8 @@
         <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="171">
-                <caret line="127" column="87" selection-start-line="127" selection-start-column="87" selection-end-line="127" selection-end-column="87" />
+              <first_editor relative-caret-position="-3668">
+                <caret line="2" selection-start-line="2" selection-end-line="2" />
               </first_editor>
               <second_editor />
             </state>
@@ -923,8 +923,8 @@
     <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="171">
-            <caret line="127" column="87" selection-start-line="127" selection-start-column="87" selection-end-line="127" selection-end-column="87" />
+          <first_editor relative-caret-position="-3668">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
           </first_editor>
           <second_editor />
         </state>

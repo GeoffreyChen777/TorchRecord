@@ -1,10 +1,6 @@
 # TorchRecord
 
-<<<<<<< HEAD
 ![](https://img.shields.io/badge/torchrecord-v0.1.0-blue.svg)
-=======
-![](https://img.shields.io/badge/torchrecord-v0.0.4-blue.svg)
->>>>>>> 12ba9a07febf06122be5b67e1f35fd37f151216c
 
 TorchRecord can merge the small files including images and labels into one or multiple big record file to improve the copying and reading performance.
 
