@@ -1,6 +1,10 @@
 # TorchRecord
 
+<<<<<<< HEAD
 ![](https://img.shields.io/badge/torchrecord-v0.1.0-blue.svg)
+=======
+![](https://img.shields.io/badge/torchrecord-v0.0.4-blue.svg)
+>>>>>>> 12ba9a07febf06122be5b67e1f35fd37f151216c
 
 TorchRecord can merge the small files including images and labels into one or multiple big record file to improve the copying and reading performance.
 
@@ -25,7 +29,12 @@ Env: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz 4core with 32 GB Mem
     Conventional:    100%|██████████████████| 369/369 [00:22<00:00, 16.16it/s]
     TRLoader:        100%|██████████████████| 369/369 [00:13<00:00, 26.73it/s]
     ```
-    
+## Installation
+
+```bash
+pip install torchrecord
+```
+
 ## Demo
 
 ```python
