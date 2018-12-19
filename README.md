@@ -30,6 +30,7 @@ Env: Intel(R) Xeon(R) CPU E5-2603 0 @ 1.80GHz 4core with 32 GB Mem
 ```bash
 pip install torchrecord
 ```
+**pillow-simd** which is a faster folk of Pillow is recommended.
 
 ## Demo
 
