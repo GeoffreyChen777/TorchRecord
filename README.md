@@ -80,6 +80,10 @@ for i, batch in enumerate(loader):
 
 ```
 
+## About Memory Usage
+
+LMDB is a Lightning Memory-Mapped Database. It will load the data into your memory. If the memory of your PC is insufficient, the loading speed might be slow due to the memory cache replacement. In order to solve this problem, TorchRecord use `record_num` to split dataset into several sub record. TRrecord will load all the sub record one by one and close trained record to release the memory.
+
 ## The Detail of the Writer
 
 - data_process_func:

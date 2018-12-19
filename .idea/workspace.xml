@@ -24,7 +24,7 @@
     <session id="1257938538">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="2" />
@@ -98,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="-3668">
+              <first_editor relative-caret-position="-3229">
                 <caret line="2" selection-start-line="2" selection-end-line="2" />
               </first_editor>
               <second_editor />
@@ -629,7 +629,7 @@
       <window_info content_ui="combo" id="Project" order="2" side_tool="true" visible="true" weight="0.18849841" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32944608" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41454202" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41454202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -923,7 +923,7 @@
     <entry file="file://$PROJECT_DIR$/../TorchRecord/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-3668">
+          <first_editor relative-caret-position="-3229">
             <caret line="2" selection-start-line="2" selection-end-line="2" />
           </first_editor>
           <second_editor />
