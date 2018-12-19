@@ -156,4 +156,4 @@ TRDataset use a item pool(size: min(4*batch_size, 64)) to shuffle the sampled se
         return img, label
     ```
 
-You also can create your own dataloader with the TRSampler, a TRDataset manually.
+You can alos create your own dataloader with the TRSampler, a TRDataset manually.
