@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package caffe2;
+package torchrecord;
 
 // A few notes about the Caffe2's protobuffer convention:
 // (1) Most objects are registered by their types, such as operators and nets.

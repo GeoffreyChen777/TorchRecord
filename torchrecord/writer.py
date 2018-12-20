@@ -1,7 +1,7 @@
 import lmdb
 import os
 from PIL import Image
-from .caffe2_pb2 import TensorProtos
+from .tr_pb2 import TensorProtos
 from multiprocessing import Pool, Process
 import random
 import time

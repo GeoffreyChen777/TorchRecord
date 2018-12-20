@@ -2,7 +2,7 @@ from torchrecord import TorchRecord
 from tqdm import tqdm
 
 
-loader = TorchRecord('./testdb', 4, True, 32, 4)
+loader = TorchRecord('./testdb', 4, True, 32, 2)
 
 for epoch in range(10):
     check_sum = 0
